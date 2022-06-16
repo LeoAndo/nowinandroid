@@ -36,6 +36,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.google.samples.apps.nowinandroid.core.ui.component.NiaDropdownMenuButton
 import com.google.samples.apps.nowinandroid.core.ui.component.NiaFilledButton
@@ -50,6 +51,7 @@ import com.google.samples.apps.nowinandroid.core.ui.component.NiaToggleButton
 import com.google.samples.apps.nowinandroid.core.ui.component.NiaTopicTag
 import com.google.samples.apps.nowinandroid.core.ui.component.NiaViewToggleButton
 import com.google.samples.apps.nowinandroid.core.ui.icon.NiaIcons
+import com.google.samples.apps.nowinandroid.core.ui.preview.PreviewDevices
 import com.google.samples.apps.nowinandroid.core.ui.theme.NiaTheme
 
 /**
@@ -603,5 +605,13 @@ fun NiaCatalog() {
                 }
             }
         }
+    }
+}
+
+@PreviewDevices
+@Composable
+fun NiaCatalog_Preview() {
+    NiaTheme(androidTheme = true) {
+        NiaCatalog()
     }
 }
